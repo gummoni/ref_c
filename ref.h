@@ -5,7 +5,7 @@
 //
 //-----------------------------------------------------------------------------
 
-//íl
+//éQè∆íl
 typedef struct {
 	size_t size;
 	void* ptr;
@@ -30,7 +30,6 @@ extern void ref_get(const field_info* self, void* obj, ref* result);
 extern void ref_set(ref* self, size_t val);
 
 
-#define structs_count() (sizeof(structs) / sizeof(struct_info))
 #define const_field_val(type_name, field_name) { #field_name, &_. ## type_name ## . ## field_name, sizeof( _. ## type_name ## . ## field_name) }
 #define const_field_ptr(type_name, field_name) { #field_name, &_. ## type_name ## . ## field_name, sizeof(*_. ## type_name ## . ## field_name) }
 #define const_table(type_name) { #type_name, f_ ## type_name }
