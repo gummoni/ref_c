@@ -20,11 +20,11 @@ static const type_info _;
 //フィールド情報
 //=====================================================================
 static const field_info f_aaa[] = {
-	const_field_val(aaa, ch),
-	const_field_val(aaa, s16),
-	const_field_val(aaa, i32),
-	const_field_ptr(aaa, pi32),
-	const_field_ptr(aaa, msg),
+	const_field_val(aaa, ch		, INT	),
+	const_field_val(aaa, s16	, INT	),
+	const_field_val(aaa, i32	, INT	),
+	const_field_ptr(aaa, pi32	, INT	),
+	const_field_ptr(aaa, msg	, ARY	),
 	NULL,
 };
 
@@ -86,4 +86,18 @@ void ref_set(ref* self, size_t val) {
 		*((uint64_t*)self->ptr) = (uint64_t)val;
 		break;
 	}
+}
+
+//=====================================================================
+//JSONシリアライズ
+//=====================================================================
+void json_serialize(struct_info* info, void* obj, char* result) {
+
+}
+
+//=====================================================================
+//JSONデシリアライズ
+//=====================================================================
+void json_deserialize(struct_info* info, const char* json, void* result) {
+
 }
